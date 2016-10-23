@@ -4,12 +4,12 @@ The target was to use Let's Encrypt for VestaCP SSL Cert based in /usr/local/ves
 ```bash
 nano /etc/cron.daily/vesta_ssl
 ```
-
+Please change the [CHANGE] part with your system domain.
 ```bash
 #!/bin/bash
 
-cert_src="/home/admin/conf/web/ssl.web06.scit.ch.pem"
-key_src="/home/admin/conf/web/ssl.web06.scit.ch.key"
+cert_src="/home/admin/conf/web/ssl.[CHANGE].pem"
+key_src="/home/admin/conf/web/ssl.[CHANGE].key"
 cert_dst="/usr/local/vesta/ssl/certificate.crt"
 key_dst="/usr/local/vesta/ssl/certificate.key"
 
