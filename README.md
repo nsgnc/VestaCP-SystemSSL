@@ -1,5 +1,5 @@
 # VestaCP System SSL
-The target was to use Let's Encrypt for VestaCP SSL Cert based in /usr/local/vesta/ssl. First try was to do add the server domain to the admin user, create a let's encrypt certificate and do a symlink with the VestaCP SSL. A symlink produces a permission problem, because the exim4 service needs root:mail to read the cert files. So I've written a small script, that compares the Let's Encrypt Certificate with the system certificate, if the Let's Encrypt Cert is updated, it will copy, change permission and restart the services.
+The target was to use Let's Encrypt for VestaCP SSL Cert based in /usr/local/vesta/ssl. First try was to do add the server domain to the admin user, create a let's encrypt certificate (v-add-letsencrypt-domain) and do a symlink with the VestaCP SSL. A symlink produces a permission problem, because the exim4 service needs root:mail ownership to read the cert files. So I've written a small script, that compares the Let's Encrypt Certificate with the system certificate, if the Let's Encrypt Cert is updated, it will copy, change permission and restart the services.
 
 ```bash
 nano /etc/cron.daily/vesta_ssl
