@@ -27,7 +27,7 @@ then
 
         # Restart Services
         service vesta restart &> /dev/null
-        service vesta restart &> /dev/null
+        service exim4 restart &> /dev/null
 fi
 ```
 
